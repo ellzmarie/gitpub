@@ -1,16 +1,18 @@
 const express = require('express')
+const app = express()
+const port = 3005
+
 const drinks = require('./models/drinks')
 
-const app = express()
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Gitpub App!")
 })
 
 
-
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    console.log(drinks)
+    res.render(`index.ejs`)
 })
 
 
@@ -18,12 +20,6 @@ app.get("/drinks", (req, res) => {
 
 
 
-
-
-
-
-
-
-app.listen(1000, (req, res) => {
-    console.log("listening...")
+app.listen(port, (req, res) => {
+    console.log(`listening on ${port}...`)
 })
