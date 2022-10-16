@@ -41,4 +41,13 @@ const drinks = [
     },
   ];
 
-  module.exports = drinks
+// const drinksUpperCase = drinks[0].toUpperCase() + drinks.substring(1)
+// function capitalizeDrinks(arr) {
+//   return arr.map(element => {
+//     return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase()
+//   })
+// }
+
+// console.log(capitalizeDrinks(drinks))
+
+module.exports = drinks
