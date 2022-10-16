@@ -9,10 +9,12 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Gitpub App!")
 })
 
-
 app.get("/drinks", (req, res) => {
-    console.log(drinks)
-    res.render(`index.ejs`)
+    // res.send(drinks)
+    res.render('index.ejs', {
+        allDrinks: drinks,
+        title: 'index'
+    })
 })
 
 
