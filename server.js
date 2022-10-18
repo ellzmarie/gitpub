@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Gitpub App!")
 })
 
+// index
 app.get("/drinks", (req, res) => {
     // res.send(drinks)
     
@@ -18,13 +19,23 @@ app.get("/drinks", (req, res) => {
     })
 })
 
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+})
+
+//show
+app.get('/drinks/:x', (req, res) => {
+    res.render('show.ejs', {
+        drinks: drinks[req.params.x],
+        title: 'show'
+    })
+})
 
 
 
 
 
 
-
-app.listen(port, (req, res) => {
+app.listen(port, () => {
     console.log(`listening on ${port}...`)
 })
