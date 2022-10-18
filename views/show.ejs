@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Drinks Menu</title>
+    <title>At foo bar</title>
   </head>
   <body>
-    <h1>Special Drinks Menu</h1>
-
-    The <%=drinks.name; %> is <%=drinks.price; %>. 
-    <%=drinks.image; %>
-    <% } %>
-
+    <h1>At foo bar</h1>
+    <h2><%=drinks.name; %></h2>
+    <img src=<%=drinks.image + ".png"%>" alt="image"> 
+    <h3>$<%=drinks.price %></h3>
+    <a href="/drinks" class="back-btn">Back</a>
+   
   </body>
 </html>
+
