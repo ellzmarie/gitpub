@@ -26,7 +26,7 @@ app.get("/drinks/:id", (req, res) => {
     })
 })
 
-//show
+// show
 app.get('/drinks/:id', (req, res) => {
     res.render('show.ejs', {
         drinks: drinks[req.params.id],
@@ -34,11 +34,7 @@ app.get('/drinks/:id', (req, res) => {
     })
 })
 
-
-
-
-
-
+// port
 app.listen(port, () => {
     console.log(`listening on ${port}...`)
 })
