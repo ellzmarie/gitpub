@@ -1,0 +1,10 @@
+<body>
+    <h1>Food menu</h1>
+    <ul>
+        <% for(let i = 0; i < allFood.length; i++) { %>
+        <li>
+            <a href="/food/<%=i%>"><%=allFood[i].name %></a>
+        </li>
+        <% } %>
+    </ul>
+</body>
