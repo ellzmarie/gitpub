@@ -7,7 +7,9 @@
   <body>
     <h1>At foo bar</h1>
     <h2><%=drinks.name; %></h2>
-    <img src=<%=drinks.image + ".png"%>" alt="image"> 
+    <!-- the below is not working see screen shot in slack -->
+    <img src="<%=drinks.image.slice(0,-3)+"png"%>" alt="image"> 
+    <!-- <img src=<%=drinks.image + ".png"%>" alt="image">  -->
     <h3>$<%=drinks.price %></h3>
     <a href="/drinks" class="back-btn">Back</a>
    
